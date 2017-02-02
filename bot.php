@@ -26,7 +26,6 @@ if (!is_null($events['events'])) {
 				$sticker = $event['massage']['sticker'];
 				$replyToken = $event['replyToken'];
 				$massage = ['type' => 'sticker' , 'sticker' => $sticker];
-			}
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
@@ -47,6 +46,7 @@ if (!is_null($events['events'])) {
 			curl_close($ch);
 
 			echo $result . "\r\n";
+			}
 		}
 	}
 }
