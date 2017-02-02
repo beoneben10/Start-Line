@@ -21,6 +21,12 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => $text
 			];
+			
+			if($event['type'] == 'message' && $event['message']['type'] == 'sticker'){
+				$sticker = $event['massage']['sticker'];
+				$replyToken = $event['replyToken'];
+				$massage = ['type' => 'sticker' , 'sticker' => $sticker];
+			}
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
