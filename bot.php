@@ -10,32 +10,27 @@ if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
-		if ($event['type'] == 'message') {
-		switch($event['massage']['type']){
-			case['text']:
-				
-			break;
-			case['sticker']:
-				function getSticker($replyToken){[
-					$sticker = array(
-					'type' => 'sticker',
-					'packegeId' => '1',
-					'stickerId' => '1'
-					);
-					$packet = array(
-					'replyToken' => $replyToken,
-					'message' => array($sticker)
-					);
-					return $packet;
-				}
-				$packet = getSticker($event['replyToken']);
-				postMessage($token,$packet,$url);
-			break;
+		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+			// Get text sent
+			$text = $event['message']['text'];
+			// Get replyToken
+			$replyToken = $event['replyToken'];
+
+			// Build message to reply back
+			$messages = [
+				'type' => 'text',
+				'text' => $text
+			];
+
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
-			function postMessage($access_token,$packet,$url){
-			$post = json_encode($packet);
+			$data = [
+				'replyToken' => $replyToken,
+				'messages' => [$messages],
+			];
+			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
