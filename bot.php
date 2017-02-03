@@ -44,7 +44,8 @@ $token = 'SmC479aBsZtxrVoqsqEW1KDMT6c/bP6woDbRg2BD56+k/NM86O4XKvG68KVShh4mImg9IQ
  postMessage($token,$packet,$urlReply);
  break;
  case 'image':
-   
+ $packet = getImage($item['replyToken']);
+ postMessage($token,$packet,$urlReply);
  break;
  case 'video':
  
