@@ -4,19 +4,12 @@ $post = file_get_contents('php://input');
 $urlReply = 'https://api.line.me/v2/bot/message/reply';
 $token = 'SmC479aBsZtxrVoqsqEW1KDMT6c/bP6woDbRg2BD56+k/NM86O4XKvG68KVShh4mImg9IQJbE+QaVdGlSUSAbhzuxYN60cRrWdrqa6eyTAf2aOZO2IxluB9A4tAFYjepYUVSX+R1OKfrl9JX2zlc3QdB04t89/1O/w1cDnyilFU=';
 
-function getSticker($replyToken){
- $sticker = array(
- 'type' => 'sticker',
- 'packageId' => '1',
- 'stickerId' => '1'
- );
- $packet = array(
- 'replyToken' => $replyToken,
- 'messages' => array($sticker),
- );
-   return $packet;
-}
- 
+ function getSticker($replyToken){
+ $sticker = array('type' => 'sticker','packageId' => '1','stickerId' => '1');
+ $packet = array('replyToken' => $replyToken,'messages' => array($sticker));
+ return $packet;
+ } 
+
  function postMessage($token,$packet,$urlReply){
  $dataEncode = json_encode($packet);
  $headersOption = array('Content-Type: application/json','Authorization: Bearer '.$token);
@@ -28,7 +21,7 @@ function getSticker($replyToken){
  curl_setopt($ch,CURLOPT_FOLLOWLOCATION,1);
  $result = curl_exec($ch);
  curl_close($ch);
-}
+ }
 
  $res = json_decode($post, true);
  if(isset($res['events']) && !is_null($res['events'])){
