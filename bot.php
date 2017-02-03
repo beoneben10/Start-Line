@@ -10,6 +10,12 @@ $token = 'SmC479aBsZtxrVoqsqEW1KDMT6c/bP6woDbRg2BD56+k/NM86O4XKvG68KVShh4mImg9IQ
  return $packet;
  } 
 
+ function getText($replyToken){
+ $text = array('type' => 'text','text' => 'สวัสดีครับ');
+ $packet = array('replyToken' => $replyToken,'messages' => array($text));
+ return $packet;
+ }
+
  function postMessage($token,$packet,$urlReply){
  $dataEncode = json_encode($packet);
  $headersOption = array('Content-Type: application/json','Authorization: Bearer '.$token);
@@ -29,7 +35,8 @@ $token = 'SmC479aBsZtxrVoqsqEW1KDMT6c/bP6woDbRg2BD56+k/NM86O4XKvG68KVShh4mImg9IQ
  if($item['type'] == 'message'){
  switch($item['message']['type']){
  case 'text':
-   
+ $packet = getText($item['replyToken']);
+ postMessage($token,$packet,$urlReply);
  break;
  case 'image':
    
