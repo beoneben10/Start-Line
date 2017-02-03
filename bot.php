@@ -5,7 +5,7 @@ $urlReply = 'https://api.line.me/v2/bot/message/reply';
 $token = 'SmC479aBsZtxrVoqsqEW1KDMT6c/bP6woDbRg2BD56+k/NM86O4XKvG68KVShh4mImg9IQJbE+QaVdGlSUSAbhzuxYN60cRrWdrqa6eyTAf2aOZO2IxluB9A4tAFYjepYUVSX+R1OKfrl9JX2zlc3QdB04t89/1O/w1cDnyilFU=';
 
  function getSticker($replyToken){
- $sticker = array('type' => 'sticker','packageId' => '1','stickerId' => '1');
+ $sticker = array('type' => 'sticker','packageId' => '1','stickerId' => '5');
  $packet = array('replyToken' => $replyToken,'messages' => array($sticker));
  return $packet;
  } 
