@@ -55,4 +55,7 @@ function getSticker($replyToken){
  postMessage($token,$packet,$urlReply);
  break;
  }
- 
+ }
+ }
+ }
+echo "OK";
