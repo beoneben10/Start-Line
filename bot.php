@@ -16,6 +16,11 @@ $token = 'SmC479aBsZtxrVoqsqEW1KDMT6c/bP6woDbRg2BD56+k/NM86O4XKvG68KVShh4mImg9IQ
  return $packet;
  }
 
+ function getImage($replyToken){
+ $image = array('type' => 'image','originalContentUrl' => 'http://techsauce.co/wp-content/uploads/2016/10/line-bot-new-message-type.jpg','previewImageUrl' => 'http://techsauce.co/wp-content/uploads/2016/10/line-bot-new-message-type.jpg');
+ $packet = array('replyToken' => $replyToken,'messages' => array($image));
+ }
+
  function postMessage($token,$packet,$urlReply){
  $dataEncode = json_encode($packet);
  $headersOption = array('Content-Type: application/json','Authorization: Bearer '.$token);
