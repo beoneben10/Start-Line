@@ -1,3 +1,3 @@
 <?php
-$access_token = $_SERVER['6GXQOW+Hd+anHd0hF2YhAI/OiiKkBG1oy9ap7ZCkie9fagxHZTXDhQETDgyiIiK6ldDwArW1nG96PydpgAqiRBRqqpANljXTGMo6A9LJCV0UCKY/iHWWRQCnb5dBhlriXiWXyDrbcK18zDd+u/5l9AdB04t89/1O/w1cDnyilFU='];
+$access_token = $_SERVER['SmC479aBsZtxrVoqsqEW1KDMT6c/bP6woDbRg2BD56+k/NM86O4XKvG68KVShh4mImg9IQJbE+QaVdGlSUSAbhzuxYN60cRrWdrqa6eyTAf2aOZO2IxluB9A4tAFYjepYUVSX+R1OKfrl9JX2zlc3QdB04t89/1O/w1cDnyilFU='];
 ?>
