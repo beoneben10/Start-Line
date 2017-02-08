@@ -29,11 +29,11 @@ if (!is_null($events['events'])) {
 				$data = $gd->getDevision($ex_text_get[1]);
 				if($data != "Province_NULL"){
 					$text_m = "ข้อมูลห้อง : {$data['province']} 
-					อุณภูมิ : {$data['temperature_current']} 
-					อุณภูมิสูงสุด : {$data['temperature_max']} 
-					อุณภูมิตำสุด : {$data['temperature_min']} 
-					ความชื้นสัมพัทธ์ : {$data['relativeHumidity']} 
-					ความเร็วลม : {$data['windSpeed']} km/h
+					อาคาร : {$data['temperature_current']} 
+					ชั้น : {$data['temperature_max']} 
+					ห้อง : {$data['temperature_min']} 
+					ลายละเอียด : {$data['relativeHumidity']} 
+					เบอร์โทร : {$data['windSpeed']} km/h
 					";
 				}else {
 					$text_m = "ไม่พบข้อมูล";
