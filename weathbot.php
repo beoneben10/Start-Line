@@ -26,7 +26,7 @@ if (!is_null($events['events'])) {
 			}else if(strpos($text_get, "ห้อง") !== false){
 				$ex_text_get = explode(" ", $text_get); // explode 
 				$text_m = $ex_text_get[0]." ".$ex_text_get[1];
-				$data = $gd->getWeatherToday($ex_text_get[1]);
+				$data = $gd->getDevision($ex_text_get[1]);
 				if($data != "Province_NULL"){
 					$text_m = "ข้อมูลห้อง : {$data['province']} 
 					อุณภูมิ : {$data['temperature_current']} 
