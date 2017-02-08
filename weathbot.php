@@ -23,18 +23,17 @@ if (!is_null($events['events'])) {
 			//$text = $event['message']['text'];
 			if($text_get == 'สวัสดี'){
 				$text_m = 'สวัสดีจ๊ะ';
-			}else if(strpos($text_get, "สภาพอากาศ") !== false){
+			}else if(strpos($text_get, "ห้อง") !== false){
 				$ex_text_get = explode(" ", $text_get); // explode 
 				$text_m = $ex_text_get[0]." ".$ex_text_get[1];
 				$data = $gd->getWeatherToday($ex_text_get[1]);
 				if($data != "Province_NULL"){
-					$text_m = "ข้อมูลสภาพอากาศ : {$data['province']} 
-					อุณภูมิ : {$data['temperature_current']} c
-					อุณภูมิสูงสุด : {$data['temperature_max']} c
-					อุณภูมิตำสุด : {$data['temperature_min']} c
-					ความชื้นสัมพัทธ์ : {$data['relativeHumidity']} %
+					$text_m = "ข้อมูลห้อง : {$data['province']} 
+					อุณภูมิ : {$data['temperature_current']} 
+					อุณภูมิสูงสุด : {$data['temperature_max']} 
+					อุณภูมิตำสุด : {$data['temperature_min']} 
+					ความชื้นสัมพัทธ์ : {$data['relativeHumidity']} 
 					ความเร็วลม : {$data['windSpeed']} km/h
-					ปริมาณน้ำฝน : {$data['rainfall']} mm
 					";
 				}else {
 					$text_m = "ไม่พบข้อมูล";
