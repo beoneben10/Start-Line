@@ -34,21 +34,21 @@ class GetData
                 $obj = json_decode($output);
                 $index = self::getIndexProvince($province);
                 if(isset($index)){
-                        $data_province = $obj->Stations[$index]->StationNameTh;
-                        $data_temp_current = $obj->Stations[$index]->Observe->Temperature->Value;
-                        $data_temp_max = $obj->Stations[$index]->Observe->MaxTemperature->Value;
-                        $data_temp_min = $obj->Stations[$index]->Observe->MinTemperature->Value;
-                        $data_relativeHumidity = $obj->Stations[$index]->Observe->RelativeHumidity->Value;
-                        $data_windSpeed = $obj->Stations[$index]->Observe->WindSpeed->Value;
+                        $data_province = $obj->[$index]->StationNameTh;
+                        $data_Buil = $obj->[$index]->Observe->Buil->Value;
+                        $data_ID = $obj->[$index]->Observe->ID->Value;
+                        $data_room = $obj->[$index]->Observe->room->Value;
+                        $data_Devision = $obj->[$index]->Observe->Devision->Value;
+                        $data_tel = $obj->[$index]->Observe->tel->Value;
                        
 
                         $data_array = array(
                         "province" => "{$data_province}",
-                        "temperature_current" => "{$data_temp_current}",
-                        "temperature_max" => "{$data_temp_max}",
-                        "temperature_min" => "{$data_temp_min}",
-                        "relativeHumidity" => "{$data_relativeHumidity}",
-                        "windSpeed" => "{$data_windSpeed}",
+                        "Buil" => "{$data_Buil}",
+                        "ID" => "{$data_ID}",
+                        "room" => "{$data_room}",
+                        "Devision" => "{$data_Devison}",
+                        "tel" => "{$data_tel}",
                         
                         "KEY" => "{$index}",
                         );
