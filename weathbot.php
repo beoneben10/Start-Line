@@ -33,7 +33,7 @@ if (!is_null($events['events'])) {
 					ชั้น : {$data['ID']} 
 					ห้อง : {$data['room']} 
 					ลายละเอียด : {$data['Devision']} 
-					เบอร์โทร : {$data['tel']} km/h
+					เบอร์โทร : {$data['tel']}
 					";
 				}else {
 					$text_m = "ไม่พบข้อมูล";
