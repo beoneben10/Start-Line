@@ -35,11 +35,11 @@ class GetData
                 $index = self::getIndexProvince($province);
                 if(isset($index)){
                         $data_province = $obj->[$index]->StationNameTh;
-                        $data_Buil = $obj->[$index]->Observe->Buil->Value;
-                        $data_ID = $obj->[$index]->Observe->ID->Value;
-                        $data_room = $obj->[$index]->Observe->room->Value;
-                        $data_Devision = $obj->[$index]->Observe->Devision->Value;
-                        $data_tel = $obj->[$index]->Observe->tel->Value;
+                        $data_Buil = $obj->[$index]->Observe->Build->Value;
+                        $data_ID = $obj->[$index]->Observe->IDnum->Value;
+                        $data_room = $obj->[$index]->Observe->roomdes->Value;
+                        $data_Devision = $obj->[$index]->Observe->Devisiondes->Value;
+                        $data_tel = $obj->[$index]->Observe->telephone->Value;
                        
 
                         $data_array = array(
