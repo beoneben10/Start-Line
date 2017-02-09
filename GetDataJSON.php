@@ -23,7 +23,7 @@ class GetData
 
                 $ch = curl_init(); 
                 // set url สำหรับดึงข้อมูล 
-                curl_setopt($ch, CURLOPT_URL, "https://www.namo.xyz/lineben/myfile.json"); 
+                curl_setopt($ch, CURLOPT_URL, "https://www.namo.xyz/lineben/json2.php"); 
                 //return the transfer as a string 
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
                 // ตัวแปร $output เก็บข้อมูลทั้งหมดที่ดึงมา 
