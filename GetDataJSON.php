@@ -34,7 +34,7 @@ class GetData
                 $obj = json_decode($output);
                 $index = self::getIndexProvince($province);
                 if(isset($index)){
-                        $data_province = $obj->[$index];
+                        $data_province = $obj->[$index]->Devisiondes;
                         $data_Buil = $obj->[$index]->Buil;
                         $data_ID = $obj->[$index]->ID;
                         $data_room = $obj->[$index]->room;
