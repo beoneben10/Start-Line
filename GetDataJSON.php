@@ -32,7 +32,7 @@ class GetData
                 curl_close($ch);    
                 // output ออกไปครับ
                 $obj = json_decode($output);
-                foreach ($json as $row){
+                foreach ($obj as $row){
 		echo $row['Buil']." ";
 		echo $row['ID']." ";
 		echo $row['room']." ";
@@ -41,12 +41,12 @@ class GetData
 		echo "<br>";}
                 $index = self::getIndexProvince($province);
                 if(isset($index)){
-                        $data_province = $obj->Stations[$index]->Devision;
-                        $data_Buil = $obj->Stations[$index]->Buil;
-                        $data_ID = $obj->Stations[$index]->ID;
-                        $data_room = $obj->Stations[$index]->room;
-                        $data_Devision = $obj->Stations[$index]->Devision;
-                        $data_tel = $obj->Stations[$index]->tel;
+                        $data_province = $row->Stations[$index]->Devision;
+                        $data_Buil = $row->Stations[$index]->Buil;
+                        $data_ID = $row->Stations[$index]->ID;
+                        $data_room = $row->Stations[$index]->room;
+                        $data_Devision = $row->Stations[$index]->Devision;
+                        $data_tel = $row->Stations[$index]->tel;
                        
 
                         $data_array = array(
