@@ -51,11 +51,11 @@ class GetData
 
                         $data_array = array(
                         
-                        "Buil" => "{$data_Buil}",
-                        "ID" => "{$data_ID}",
-                        "room" => "{$data_room}",
-                        "Devision" => "{$data_Devison}",
-                        "tel" => "{$data_tel}",
+                        "Build" => "{$data_Buil}",
+                        "IDnum" => "{$data_ID}",
+                        "roomdes" => "{$data_room}",
+                        "Devisiondes" => "{$data_Devison}",
+                        "telephone" => "{$data_tel}",
                         
                         "KEY" => "{$index}",
                         );
