@@ -41,16 +41,16 @@ class GetData
 		echo "<br>";}
                 $index = self::getIndexProvince($province);
                 if(isset($index)){
-                        $data_province = $row->stats[$index]->Devision;
-                        $data_Buil = $row->stats[$index]->Buil;
-                        $data_ID = $row->stats[$index]->ID;
-                        $data_room = $row->stats[$index]->room;
-                        $data_Devision = $row->stats[$index]->Devision;
-                        $data_tel = $row->stats[$index]->tel;
+                        
+                        $data_Buil = $row->Stations[$index]->Buil;
+                        $data_ID = $row->Stations[$index]->ID;
+                        $data_room = $row->Stations[$index]->room;
+                        $data_Devision = $row->Stations[$index]->Devision;
+                        $data_tel = $row->Stations[$index]->tel;
                        
 
                         $data_array = array(
-                        "province" => "{$data_province}",
+                        
                         "Buil" => "{$data_Buil}",
                         "ID" => "{$data_ID}",
                         "room" => "{$data_room}",
