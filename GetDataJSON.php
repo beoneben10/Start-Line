@@ -34,12 +34,12 @@ class GetData
                 $obj = json_decode($output);
                 $index = self::getIndexProvince($province);
                 if(isset($index)){
-                        $data_province = $obj->$index->Devisondes->Value;
-                        $data_Buil = $obj->$index->Build->Value;
-                        $data_ID = $obj->$index->IDnum->Value;
-                        $data_room = $obj->$index->roomdes->Value;
-                        $data_Devision = $obj->$index->Devisiondes->Value;
-                        $data_tel = $obj->$index->telephone->Value;
+                        $data_province = $obj->Devisondes[$index]->Devisondes->Value;
+                        $data_Buil = $obj->Build[$index]->Build->Value;
+                        $data_ID = $obj->IDnum[$index]->IDnum->Value;
+                        $data_room = $obj->roomdes[$index]->roomdes->Value;
+                        $data_Devision = $obj->Devisondes[$index]->Devisiondes->Value;
+                        $data_tel = $obj->telephone[$index]->telephone->Value;
                        
 
                         $data_array = array(
