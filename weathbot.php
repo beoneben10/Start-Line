@@ -28,7 +28,7 @@ if (!is_null($events['events'])) {
 				$text_m = $ex_text_get[0]." ".$ex_text_get[1];
 				$data = $gd->getDevision($ex_text_get[1]);
 				if($data != "Province_NULL"){
-					$text_m = "ข้อมูลห้อง : {$data['province']} 
+					$text_m = "ข้อมูลห้อง
 					อาคาร : {$data['Buil']} 
 					ชั้น : {$data['ID']} 
 					ห้อง : {$data['room']} 
