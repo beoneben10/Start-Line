@@ -29,11 +29,11 @@ if (!is_null($events['events'])) {
 				$data = $gd->getDevision($ex_text_get[1]);
 				if($data != "Province_NULL"){
 					$text_m = "ข้อมูลห้อง
-					อาคาร : {$data['Buil']} 
-					ชั้น : {$data['ID']} 
-					ห้อง : {$data['room']} 
-					ลายละเอียด : {$data['Devision']} 
-					เบอร์โทร : {$data['tel']}
+					อาคาร : {$data['Build']} 
+					ชั้น : {$data['IDnum']} 
+					ห้อง : {$data['roomdes']} 
+					ลายละเอียด : {$data['Devisiondes']} 
+					เบอร์โทร : {$data['telephone']}
 					";
 				}else {
 					$text_m = "ไม่พบข้อมูล";
