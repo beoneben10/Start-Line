@@ -22,7 +22,7 @@ if (!is_null($events['events'])) {
 			$text_get = $event['message']['text'];
 			//$text = $event['message']['text'];
 			if($text_get == 'สวัสดี'){
-				$text_m = 'สวัสดีจ๊ะ';
+				$text_m = 'สวัสดีจ๊ะอิอิ';
 			}else if(strpos($text_get, "ห้อง") !== false){
 				$ex_text_get = explode(" ", $text_get); // explode 
 				$text_m = $ex_text_get[0]." ".$ex_text_get[1];
