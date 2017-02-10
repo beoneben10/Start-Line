@@ -23,7 +23,7 @@ class GetData
 
                 $ch = curl_init(); 
                 // set url สำหรับดึงข้อมูล 
-                curl_setopt($ch, CURLOPT_URL, "https://www.namo.xyz/lineben/myfile.json"); 
+                curl_setopt($ch, CURLOPT_URL, "https://www.namo.xyz/lineben/myfile1.json"); 
                 //return the transfer as a string 
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
                 // ตัวแปร $output เก็บข้อมูลทั้งหมดที่ดึงมา 
@@ -34,7 +34,7 @@ class GetData
                 $obj = json_decode($output);
                 $index = self::getIndexProvince($province);
                 if(isset($index)){
-                        $data_province = $obj->Devisiondes[$index]->Devisiondes->Value;
+                        $data_province = $obj->Devisiondes[$index]->Devisiondes;
                         $data_Buil = $obj->Build[$index]->Buil->Value;
                         $data_ID = $obj->Idnum[$index]->ID->Value;
                         $data_room = $obj->roomdes[$index]->room->Value;
