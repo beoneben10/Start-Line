@@ -16,6 +16,8 @@
 		echo $row['Devision']." ";
 		echo $row['tel']." ";
 		echo "<br>";}
-			
+		
+		echo "<hr>";
+		echo $obj;
 		// ปิดการเชื่อต่อ
                 curl_close($ch);
