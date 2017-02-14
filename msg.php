@@ -25,7 +25,7 @@ class msg{
 		}	
 	}
 	public function conDB($token,$userID,$txt){
-		$mysqli = new mysqli("202.29.52.231", "tarsky", "tarsky@ccuru", "tarsky");
+		$mysqli = new mysqli("localhost", "root", "ntkacml1", "test");
 		mysqli_set_charset($mysqli,"utf8");
 		$query = "INSERT INTO line (token,user,txt,status) VALUES ('".$token."','".$userID."','".$txt."','0')";
 		$mysqli->query($query);
@@ -72,7 +72,7 @@ class msg{
 			$this->sendMSG($url,$data);
 	}
 	public function sendMSG($url,$data){
-		$access_token = 'GkoOxRvFydfEqIwtmWNXpibqEjD6BntdOLAIriC/YtmbdrLiIqCTZrYKKnZW2Scmz5p8pR11GUJ1g2AxZJ8lKnOgVGwzZAP3ti+vivJJ7rIX9t7eGHiwi66UX3lK889nY7vAdGoKGk11l7292Ah59wdB04t89/1O/w1cDnyilFU=';
+		$access_token = 'SmC479aBsZtxrVoqsqEW1KDMT6c/bP6woDbRg2BD56+k/NM86O4XKvG68KVShh4mImg9IQJbE+QaVdGlSUSAbhzuxYN60cRrWdrqa6eyTAf2aOZO2IxluB9A4tAFYjepYUVSX+R1OKfrl9JX2zlc3QdB04t89/1O/w1cDnyilFU=';
 		$post = json_encode($data);
 		$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
