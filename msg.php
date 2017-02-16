@@ -3,24 +3,24 @@ class msg{
 	public function showMSG($token,$userID,$txt){
 		$this->conDB($token,$userID,$txt);
 		switch ($txt) {
-			case 'ฟิล':
-				$this->replyMSG($token,"นายชลัช แย้มชื่น \n นักวิชาการคอมพิวเตอร์");
+			case 'เบน':
+				$this->replyMSG($token,"Nuttapon . K \n นักเรียน");
 				break;
-			case 'ต้า':
-				$this->replyMSG($token,"นายนพดล ทองชื่นตระกูล \n\n ตำแหน่ง นวก.คอมพิวเตอร์");
+			case 'รอบเบน':
+				$this->replyMSG($token,"Robben \n\n นักเตะบอล");
 				break;
-			case 'มิ้น':
-				$this->replyMSG($token,"น.ส.พณิชยาพร นวลคำ \n นักวิชาการคอมพิวเตอร์");
+			case 'วา':
+				$this->replyMSG($token,"น.ส.สุภารัตน์ \n นักประกาศข่าว");
 				break;
 			case 'แจ้งปัญหา':
-				$this->replyMSG($token,"กรุณาแจ้งข้อมูลในรูปแบบ \n แจ้งปัญหา:Internet มีปัญหาที่อาคารภูมิ:นพดล");
+				$this->replyMSG($token,"กรุณาแจ้งข้อมูลในรูปแบบ \n แจ้งปัญหา:Internet มีปัญหาที่อาคารใหม่ 8 ชั้น");
 				$this->pushMSG($userID,"รับทราบข้อมูล \n เมื่อแก้ไขเสร็จเรียบร้อยจะแจ้งให้ทราบภายหลัง");
 				sleep(20);
 				$this->pushMSG($userID,'แก้ไขปัญหาเรียบร้อยแล้ว');
 				break;
 			default:
 				$this->replyMSG($token,"เราไม่เข้าใจในสิ้งที่คุณกรอกข้อมูลเข้ามา");
-				$this->pushMSG($userID,"กรุณาเลือกเมนูที่ท่านต้องการ\n1.ฟิล\n2.ต้า\n3.มิ้น\n4.แจ้งปัญหา\n\nขอบคุณครับ ");
+				$this->pushMSG($userID,"กรุณาเลือกเมนูที่ท่านต้องการ\n1.เบน\n2.รอบเบน\n3.วา\n4.แจ้งปัญหา\n\nขอบคุณครับ ");
 				break;
 		}	
 	}
