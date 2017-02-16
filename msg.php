@@ -7,7 +7,7 @@ class msg{
 				$this->replyMSG($token,"Nuttapon . K \n นักเรียน");
 				break;
 			case 'รอบเบน':
-				$this->replyMSG($token,"Robben \n\n นักเตะบอล");
+				$this->replyMSG($token,"Robben \n นักเตะบอล");
 				break;
 			case 'วา':
 				$this->replyMSG($token,"น.ส.สุภารัตน์ \n นักประกาศข่าว");
