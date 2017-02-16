@@ -42,11 +42,11 @@ class GetData
                 $index = self::getIndexProvince($province);
                 if(isset($index)){
                         
-                        $data_Buil = $row->[$index];
-                        $data_ID = $row->[$index];
-                        $data_room = $row->[$index];
-                        $data_Devision = $row->[$index];
-                        $data_tel = $row->[$index];
+                        $data_Buil = $row['Buil']->[$index];
+                        $data_ID = $row['ID']->[$index];
+                        $data_room = $row['room']->[$index];
+                        $data_Devision = $row['Devision']->[$index];
+                        $data_tel = $row['tel']->[$index];
                        
 
                         $data_array = array(
