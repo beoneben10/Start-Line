@@ -25,7 +25,7 @@ class msg{
 		}	
 	}
 	public function conDB($token,$userID,$txt){
-		$mysqli = new mysqli("localhost", "root", "ntkacml1", "test");
+		$mysqli = new mysqli("127.0.0.1", "root", "ntkacml1", "test");
 		mysqli_set_charset($mysqli,"utf8");
 		$query = "INSERT INTO line (token,user,txt,status) VALUES ('".$token."','".$userID."','".$txt."','0')";
 		$mysqli->query($query);
@@ -38,11 +38,11 @@ class msg{
 					'type' => 'text',
 					'text' => $text
 				],
-				[
+				/*[
 					'type'=>'sticker',
 				    'packageId' => '1',
 				    'stickerId' => '3'
-				]
+				]*/
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
